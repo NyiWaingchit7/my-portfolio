@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { ReactNode } from "react";
+import logo from "./logo.svg";
+
+import { Box, Button, Typography, styled } from "@mui/material";
+import img from "./pic/383784630_1052459922592359_848932231236809971_n.jpg";
+import Objective from "./component/Objective";
+import { obj } from "./file/object";
+import Experience from "./component/Experience";
+import Navbar from "./component/Navbar";
+import Home from "./component/Home";
+import Footer from "./component/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Home />
+      <Footer />
+    </>
   );
 }
 
