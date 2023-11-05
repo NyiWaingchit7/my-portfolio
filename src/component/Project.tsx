@@ -1,6 +1,6 @@
 import React from "react";
 import { ProjectType } from "../file/project";
-import Icon from "./Icon";
+
 import {
   Box,
   Button,
@@ -11,7 +11,6 @@ import {
   CardMedia,
   Chip,
   Typography,
-  styled,
 } from "@mui/material";
 
 const Project = ({ title, tags, image, description }: ProjectType) => {

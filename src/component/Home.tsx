@@ -62,11 +62,14 @@ const Home = () => {
           />
         </CustomBox>
 
-        <Box sx={{ borderTop: "1px solid #7B89A8", maxWidth: "1100px", mt: 7 }}>
+        <Box
+          sx={{ borderTop: "1px solid #7B89A8", maxWidth: "1100px", mt: 7 }}
+          id="objective"
+        >
           <Typography
             variant="h4"
             color="white"
-            sx={{ width: "100%", textAlign: "center", my: 5 }}
+            sx={{ width: "100%", textAlign: "center", mt: 8, mb: 3 }}
           >
             Objectives
           </Typography>
@@ -77,13 +80,12 @@ const Home = () => {
               justifyContent: "center",
             }}
           >
-            {" "}
             {obj.map((o) => {
               return <Objective object={o} key={o} />;
             })}
           </Box>
         </Box>
-        <Box sx={{ borderTop: "1px solid #7B89A8" }}>
+        <Box sx={{ borderTop: "1px solid #7B89A8" }} id="about">
           <Experience />
         </Box>
       </Box>

@@ -37,7 +37,7 @@ export const projects: ProjectType[] = [
     description:
       "A fun challenge from Frontend Mentor using the REST Countries API.",
     image: restApi,
-    tags: ["React", "JavaScript", "CSS"],
+    tags: ["ExpressJs", "Prisma", "PostgreSql"],
     source: "",
     liveVersion: "",
     id: 2,

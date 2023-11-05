@@ -13,7 +13,7 @@ const Experience = () => {
     },
   }));
   return (
-    <Box sx={{ maxWidth: "1300px", my: 12, mx: "auto" }}>
+    <Box sx={{ maxWidth: "1300px", my: 8, mx: "auto" }}>
       <Typography
         sx={{ textAlign: "center", color: "white", my: 5 }}
         variant="h4"
@@ -42,16 +42,20 @@ const Experience = () => {
         </StackBox>
       </Box>
       <Typography
+        id="project"
         sx={{
           textAlign: "center",
           color: "white",
-          my: 5,
+          mt: 7,
         }}
         variant="h4"
       >
         Projects
       </Typography>
-      <Typography variant="h5" sx={{ textAlign: "center", color: "white" }}>
+      <Typography
+        variant="h5"
+        sx={{ textAlign: "center", color: "white", mt: 5 }}
+      >
         Let's take a look at what I have {""}
         <span style={{ color: "rgba(0,199,255,255)" }}>built</span> so far
       </Typography>
@@ -60,6 +64,7 @@ const Experience = () => {
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
+          mt: 5,
         }}
       >
         {projects.map((p) => {

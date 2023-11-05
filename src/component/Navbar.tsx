@@ -1,7 +1,6 @@
-import { AppBar, Box, Link, Typography, styled } from "@mui/material";
-import image from "../pic/275360659_700075764497445_8472877320523559701_n.jpg";
-import CodeOffIcon from "@mui/icons-material/CodeOff";
+import { AppBar, Box, Typography, styled } from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const CustomBox = styled(Box)(({ theme }) => ({
@@ -30,12 +29,16 @@ const Navbar = () => {
         px: 5,
         maxWidth: "1200px",
         mx: "auto",
-        mb: 5,
+        mb: 20,
       }}
+      id="home"
     >
       <AppBar
-        position="static"
-        style={{ background: "transparent", boxShadow: "none" }}
+        style={{
+          backgroundColor: "rgba(0, 10, 31, 255)",
+          boxShadow: "none",
+          padding: "20px",
+        }}
       >
         <CustomToolbar>
           <Box
@@ -46,16 +49,6 @@ const Navbar = () => {
               gap: "1rem",
             }}
           >
-            {/* <Box
-              component="img"
-              sx={{
-                maxHeight: "45px",
-                maxWidth: "45px",
-                objectFit: "cover",
-                borderRadius: "50%",
-              }}
-              src={image}
-            /> */}
             <CodeIcon
               sx={{
                 maxHeight: "45px",
@@ -72,39 +65,47 @@ const Navbar = () => {
 
           <CustomBox>
             <Link
+              to="home"
               style={{
                 textDecoration: "none",
                 color: "white",
                 cursor: "pointer",
               }}
+              smooth
             >
               Home
             </Link>
             <Link
+              to="objective"
               style={{
                 textDecoration: "none",
                 color: "white",
                 cursor: "pointer",
               }}
+              smooth
             >
               Objectives
             </Link>
             <Link
+              to="about"
               style={{
                 textDecoration: "none",
                 color: "white",
                 cursor: "pointer",
               }}
+              smooth
             >
               About
             </Link>
 
             <Link
+              to="project"
               style={{
                 textDecoration: "none",
                 color: "white",
                 cursor: "pointer",
               }}
+              smooth
             >
               Projects
             </Link>
