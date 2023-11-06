@@ -63,7 +63,12 @@ const Home = () => {
         </CustomBox>
 
         <Box
-          sx={{ borderTop: "1px solid #7B89A8", maxWidth: "1100px", mt: 7 }}
+          sx={{
+            borderTop: "1px solid #7B89A8",
+            maxWidth: "1100px",
+            mt: 7,
+            mx: "auto",
+          }}
           id="objective"
         >
           <Typography
