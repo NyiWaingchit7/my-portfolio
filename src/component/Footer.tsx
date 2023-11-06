@@ -60,50 +60,48 @@ const Footer = () => {
           >
             Social
           </Typography>
-          <BrowserRouter>
-            <Link
-              to="https://web.facebook.com/Chit.24007"
-              target="_blink"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                textDecoration: "none",
-              }}
-            >
-              <FacebookIcon sx={{ mr: 2, color: "white" }} />
-              <Typography variant="body2" sx={{ color: "white", my: 1 }}>
-                Facebook
-              </Typography>
-            </Link>
-            <Link
-              to="https://www.instagram.com/nyiwaingchit/"
-              target="_blink"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                textDecoration: "none",
-              }}
-            >
-              <InstagramIcon sx={{ mr: 2, color: "white" }} />
-              <Typography variant="body2" sx={{ color: "white", my: 1 }}>
-                Instagram
-              </Typography>
-            </Link>
-            <Link
-              to="https://github.com/NyiWaingchit7"
-              target="_blink"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                textDecoration: "none",
-              }}
-            >
-              <GitHubIcon sx={{ mr: 2, color: "white" }} />
-              <Typography variant="body2" sx={{ color: "white", my: 1 }}>
-                Github
-              </Typography>
-            </Link>{" "}
-          </BrowserRouter>
+          <Link
+            to="https://web.facebook.com/Chit.24007"
+            target="_blink"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              textDecoration: "none",
+            }}
+          >
+            <FacebookIcon sx={{ mr: 2, color: "white" }} />
+            <Typography variant="body2" sx={{ color: "white", my: 1 }}>
+              Facebook
+            </Typography>
+          </Link>
+          <Link
+            to="https://www.instagram.com/nyiwaingchit/"
+            target="_blink"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              textDecoration: "none",
+            }}
+          >
+            <InstagramIcon sx={{ mr: 2, color: "white" }} />
+            <Typography variant="body2" sx={{ color: "white", my: 1 }}>
+              Instagram
+            </Typography>
+          </Link>
+          <Link
+            to="https://github.com/NyiWaingchit7"
+            target="_blink"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              textDecoration: "none",
+            }}
+          >
+            <GitHubIcon sx={{ mr: 2, color: "white" }} />
+            <Typography variant="body2" sx={{ color: "white", my: 1 }}>
+              Github
+            </Typography>
+          </Link>
         </Box>
       </Box>
     </Box>

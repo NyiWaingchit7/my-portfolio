@@ -12,8 +12,9 @@ import {
   Chip,
   Typography,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
-const Project = ({ title, tags, image, description }: ProjectType) => {
+const Project = ({ title, tags, image, description, source }: ProjectType) => {
   return (
     <Box>
       <Card sx={{ maxWidth: 375, margin: "1rem" }}>
@@ -42,13 +43,15 @@ const Project = ({ title, tags, image, description }: ProjectType) => {
               mb: 3,
             }}
           >
-            <Button
-              size="small"
-              style={{ backgroundColor: "rgba(0,199,255,255)" }}
-              variant="contained"
-            >
-              Source Code
-            </Button>
+            <Link to={source} target="_blink">
+              <Button
+                size="small"
+                style={{ backgroundColor: "rgba(0,199,255,255)" }}
+                variant="contained"
+              >
+                Source Code
+              </Button>
+            </Link>
             <Button
               size="small"
               style={{ backgroundColor: "rgba(0,199,255,255)" }}
