@@ -17,12 +17,12 @@ import { Link } from "react-router-dom";
 const Project = ({ title, tags, image, description, source }: ProjectType) => {
   return (
     <Box>
-      <Card sx={{ maxWidth: 375, margin: "1rem" }}>
+      <Card sx={{ maxWidth: 375, minHeight: 500, margin: "1rem" }}>
         <CardActionArea>
           <CardMedia
             component="img"
             src={image}
-            sx={{ width: "100%", minHeight: 300 }}
+            sx={{ width: "100%", maxHeight: 300, objectFit: "contain" }}
           />
           <CardContent>
             <Typography variant="h5" component="div">

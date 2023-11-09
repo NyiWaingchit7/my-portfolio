@@ -2,6 +2,8 @@ import Image from "../pic/website-template-preview-162728.jpg";
 import News from "../pic/images.jpg";
 import restApi from "../pic/retina_1708x683_cover-5-new-things-rest-specification-b6d2c20296631ee2e258adff7f9766ea.png";
 import proverbs from "../pic/proverbs.png";
+import toDoList from "../pic/to-do-list-apps.png";
+
 export interface ProjectType {
   title: string;
   description: string;
@@ -31,7 +33,7 @@ export const projects: ProjectType[] = [
     tags: ["Vuejs", "laravel", "bootsrap", "mySql"],
     source: "",
     liveVersion: "",
-    id: 0,
+    id: 2,
   },
   {
     title: "REST BOOK API Project",
@@ -41,7 +43,7 @@ export const projects: ProjectType[] = [
     tags: ["ExpressJs", "Prisma", "PostgreSql"],
     source: "https://github.com/NyiWaingchit7/mini-rest-api-express.js",
     liveVersion: "",
-    id: 2,
+    id: 3,
   },
   {
     title: "Myanmar Proverbs",
@@ -50,6 +52,15 @@ export const projects: ProjectType[] = [
     tags: ["ReactJs", "Material UI(MUI)"],
     source: "https://github.com/NyiWaingchit7/myanmar-proverb-react.js",
     liveVersion: "",
-    id: 3,
+    id: 4,
+  },
+  {
+    title: "To-Do-List",
+    description: "Simple to-do-list web app and easy to use.",
+    image: toDoList,
+    tags: ["NextJs", "Tailwind CSS", "PostgreSql"],
+    source: "https://github.com/NyiWaingchit7/to-do-list-with-nextJs",
+    liveVersion: "",
+    id: 5,
   },
 ];
