@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { ProjectType } from "../file/project";
 
 import {
@@ -14,7 +14,15 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const Project = ({ title, tags, image, description, source }: ProjectType) => {
+const Project = ({
+  title,
+  tags,
+  image,
+  description,
+  source,
+  liveVersion,
+}: ProjectType) => {
+  const [target, setTarget] = useState("");
   return (
     <Box>
       <Card sx={{ maxWidth: 375, minHeight: 500, margin: "1rem" }}>
@@ -43,7 +51,13 @@ const Project = ({ title, tags, image, description, source }: ProjectType) => {
               mb: 3,
             }}
           >
-            <Link to={source} target="_blink">
+            <Link
+              to={source}
+              target={`${target}`}
+              onClick={() => {
+                source ? setTarget("_blank") : setTarget("");
+              }}
+            >
               <Button
                 size="small"
                 style={{ backgroundColor: "rgba(0,199,255,255)" }}
@@ -52,13 +66,21 @@ const Project = ({ title, tags, image, description, source }: ProjectType) => {
                 Source Code
               </Button>
             </Link>
-            <Button
-              size="small"
-              style={{ backgroundColor: "rgba(0,199,255,255)" }}
-              variant="contained"
+            <Link
+              to={liveVersion}
+              target={`${target}`}
+              onClick={() => {
+                liveVersion ? setTarget("_blank") : setTarget("");
+              }}
             >
-              Live Version
-            </Button>
+              <Button
+                size="small"
+                style={{ backgroundColor: "rgba(0,199,255,255)" }}
+                variant="contained"
+              >
+                Live Version
+              </Button>
+            </Link>
           </Box>
           <Box
             sx={{

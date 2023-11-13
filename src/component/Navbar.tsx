@@ -83,6 +83,7 @@ const Navbar = () => {
                 cursor: "pointer",
               }}
               smooth
+              offset={-100}
             >
               Objectives
             </Link>
@@ -94,6 +95,7 @@ const Navbar = () => {
                 cursor: "pointer",
               }}
               smooth
+              offset={-80}
             >
               About
             </Link>
@@ -106,6 +108,7 @@ const Navbar = () => {
                 cursor: "pointer",
               }}
               smooth
+              offset={-150}
             >
               Projects
             </Link>
