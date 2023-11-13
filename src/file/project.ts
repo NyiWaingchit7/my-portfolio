@@ -40,7 +40,7 @@ export const projects: ProjectType[] = [
     description:
       "Mini E-commerce web and sample of ordering products . Using fake store api data , connecting with vercel server and backend CRUD operations and it is deployed on vercel.",
     image: miniCommerce,
-    tags: ["Vuejs", "laravel", "bootsrap", "mySql"],
+    tags: ["NextJs", "PostgreSql", "Redux toolkit", "MaterialUi(MUI)"],
     source: "https://github.com/NyiWaingchit7/mini-commerce-next.js",
     liveVersion: "https://mini-commerce-next-js.vercel.app/",
     id: 3,

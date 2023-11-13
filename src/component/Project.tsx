@@ -25,7 +25,9 @@ const Project = ({
   const [target, setTarget] = useState("");
   return (
     <Box>
-      <Card sx={{ maxWidth: 375, minHeight: 500, margin: "1rem" }}>
+      <Card
+        sx={{ maxWidth: 375, minHeight: { lg: 550, md: 550 }, margin: "1rem" }}
+      >
         <CardActionArea>
           <CardMedia
             component="img"
