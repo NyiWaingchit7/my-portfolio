@@ -89,7 +89,7 @@ const Project = ({
               width: "100%",
               display: "flex",
               flexWrap: "wrap",
-              gap: "1rem",
+              gap: "10px",
               mb: 2,
             }}
           >
