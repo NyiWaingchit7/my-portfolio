@@ -45,7 +45,7 @@ const Home = () => {
             >
               Hello, I'm Nyi Waing Chit, a{" "}
               <span style={{ color: "rgba(0,199,255,255)" }}>
-                Web Developer
+                FullStack Web Developer
               </span>
             </Typography>
             <CustomTitle variant="h4">

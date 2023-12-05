@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 
 const Objective = ({ object }: any) => {
   return (
-    <Box sx={{ my: 5 }}>
+    <Box sx={{ my: 2 }}>
       <Box
         sx={{
           backgroundColor: "#000F2E",

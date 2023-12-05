@@ -6,6 +6,7 @@ import toDoList from "../pic/to-do-list-apps.png";
 import miniCommerce from "../pic/miniCommerce.jpg";
 import foodiePos from "../pic/foodiePos.png";
 import bird from "../pic/birds.png";
+import rdg from "../pic/bgpic.webp";
 
 export interface ProjectType {
   title: string;
@@ -27,6 +28,16 @@ export const projects: ProjectType[] = [
     source: "https://github.com/NyiWaingchit7/foodie-pos-nextJs",
     liveVersion: "https://foodie-pos-next-js.vercel.app/",
     id: 1,
+  },
+  {
+    title: "Red Dragon Team",
+    description:
+      "It is a Red Dragon E-football team sample web and Frontend project",
+    image: rdg,
+    tags: ["ReactJs", "Material UI"],
+    source: "https://github.com/NyiWaingchit7/rdg-app",
+    liveVersion: "https://rdg-app.vercel.app/",
+    id: 8,
   },
   {
     title: "Myanmar Proverbs",
@@ -67,16 +78,16 @@ export const projects: ProjectType[] = [
     liveVersion: "https://mini-commerce-next-js.vercel.app/",
     id: 5,
   },
-  {
-    title: "REST BOOK API Project",
-    description:
-      "A fun challenge from Frontend Mentor using the REST BOOK API.",
-    image: restApi,
-    tags: ["ExpressJs", "Prisma", "PostgreSql"],
-    source: "https://github.com/NyiWaingchit7/mini-rest-api-express.js",
-    liveVersion: "",
-    id: 6,
-  },
+  // {
+  //   title: "REST BOOK API Project",
+  //   description:
+  //     "A fun challenge from Frontend Mentor using the REST BOOK API.",
+  //   image: restApi,
+  //   tags: ["ExpressJs", "Prisma", "PostgreSql"],
+  //   source: "https://github.com/NyiWaingchit7/mini-rest-api-express.js",
+  //   liveVersion: "",
+  //   id: 6,
+  // },
   {
     title: "E-Commerce Website Laravel",
     description:

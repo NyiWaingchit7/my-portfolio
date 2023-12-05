@@ -7,7 +7,7 @@ const Navbar = () => {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    gap: "1rem",
+
     [theme.breakpoints.down("sm")]: {
       marginTop: "2rem",
     },
@@ -70,10 +70,11 @@ const Navbar = () => {
                 textDecoration: "none",
                 color: "white",
                 cursor: "pointer",
+                margin: "10px",
               }}
               smooth
             >
-              Home
+              <Typography> Home </Typography>
             </Link>
             <Link
               to="objective"
@@ -81,11 +82,12 @@ const Navbar = () => {
                 textDecoration: "none",
                 color: "white",
                 cursor: "pointer",
+                margin: "10px",
               }}
               smooth
               offset={-100}
             >
-              Objectives
+              <Typography> Objective </Typography>
             </Link>
             <Link
               to="about"
@@ -93,11 +95,12 @@ const Navbar = () => {
                 textDecoration: "none",
                 color: "white",
                 cursor: "pointer",
+                margin: "10px",
               }}
               smooth
               offset={-80}
             >
-              About
+              <Typography> About </Typography>
             </Link>
 
             <Link
@@ -106,11 +109,12 @@ const Navbar = () => {
                 textDecoration: "none",
                 color: "white",
                 cursor: "pointer",
+                margin: "10px",
               }}
               smooth
               offset={-150}
             >
-              Projects
+              <Typography> Projects </Typography>
             </Link>
           </CustomBox>
         </CustomToolbar>
