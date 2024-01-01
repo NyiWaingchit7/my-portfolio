@@ -34,9 +34,9 @@ export const projects: ProjectType[] = [
     description:
       "It is a Red Dragon E-football team sample web and Frontend project",
     image: rdg,
-    tags: ["ReactJs", "Material UI"],
-    source: "https://github.com/NyiWaingchit7/rdg-app",
-    liveVersion: "https://rdg-app.vercel.app/",
+    tags: ["NextJs", "Material UI", "PostgreSql", "Next Auth"],
+    source: "https://github.com/NyiWaingchit7/rdgNextJsFullStack",
+    liveVersion: "https://rdg-next-js-full-stack.vercel.app/",
     id: 8,
   },
   {
@@ -58,16 +58,16 @@ export const projects: ProjectType[] = [
     liveVersion: "https://birds-eosin.vercel.app/",
     id: 3,
   },
-  {
-    title: "To-Do-List",
-    description:
-      "Simple to-do-list web app and easy to use.Connecting with vercel database server and using api call",
-    image: toDoList,
-    tags: ["NextJs", "Tailwind CSS", "PostgreSql"],
-    source: "https://github.com/NyiWaingchit7/to-do-list-with-nextJs",
-    liveVersion: "https://to-do-list-with-next-js-pink.vercel.app/",
-    id: 4,
-  },
+  // {
+  //   title: "To-Do-List",
+  //   description:
+  //     "Simple to-do-list web app and easy to use.Connecting with vercel database server and using api call",
+  //   image: toDoList,
+  //   tags: ["NextJs", "Tailwind CSS", "PostgreSql"],
+  //   source: "https://github.com/NyiWaingchit7/to-do-list-with-nextJs",
+  //   liveVersion: "https://to-do-list-with-next-js-pink.vercel.app/",
+  //   id: 4,
+  // },
   {
     title: "Mini E-commerce",
     description:

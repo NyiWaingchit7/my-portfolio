@@ -17,7 +17,12 @@ const Icon = ({ name, src }: IconType) => {
       <Box
         component="img"
         src={src}
-        sx={{ width: "100%", borderRadius: "20px" }}
+        sx={{
+          width: "100%",
+          borderRadius: "20px",
+          height: 70,
+          objectFit: "contain",
+        }}
       />
 
       <Typography

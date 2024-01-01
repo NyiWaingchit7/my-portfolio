@@ -24,35 +24,25 @@ const Home = () => {
       flexDirection: "column-reverse",
     },
   }));
-  const CustomTitle = styled(Typography)(({ theme }) => ({
-    color: "white",
-    textAlign: "center",
-    [theme.breakpoints.down("md")]: {
-      fontSize: "2.5rem",
-    },
-    [theme.breakpoints.down("sm")]: {
-      fontSize: "1.5rem",
-    },
-  }));
+
   return (
-    <Box sx={{ display: "flex", justifyContent: "center" }}>
+    <Box sx={{ display: "flex", justifyContent: "center", p: 2 }}>
       <Box>
         <CustomBox>
           <Box sx={{ maxWidth: "800px" }}>
             <Typography
-              variant="h5"
-              sx={{ textAlign: "center", color: "white" }}
+              sx={{
+                textAlign: "center",
+                color: "white",
+                fontSize: { xs: "1rem", md: "1.5rem" },
+                lineHeight: { xs: 1.5, md: 1.7 },
+              }}
             >
-              Hello, I'm Nyi Waing Chit, a{" "}
-              <span style={{ color: "rgba(0,199,255,255)" }}>
-                FullStack Web Developer
-              </span>
+              Hello there! I'm Nyi Waing Chit, a passionate and ambitious web
+              developer. As you navigate through my portfolio, you'll discover
+              the perfect blend of creativity, innovation, and technical
+              prowess.
             </Typography>
-            <CustomTitle variant="h4">
-              I'm excited to showcase my work. Discover the{" "}
-              <span style={{ color: "rgba(0,199,255,255)" }}> Projects</span>{" "}
-              I've done.
-            </CustomTitle>
           </Box>
 
           <Box
