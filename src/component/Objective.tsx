@@ -7,15 +7,19 @@ const Objective = ({ object }: any) => {
       <Box
         sx={{
           backgroundColor: "#000F2E",
-          padding: 3,
+          padding: 2,
           border: "1px solid #00C7FF",
           borderRadius: "10px",
           maxWidth: "400px",
+          minHeight: "100px",
           mx: 3,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         {" "}
-        <Typography variant="body1" sx={{ color: "white", my: 2 }}>
+        <Typography sx={{ color: "white", lineHeight: 1.5 }}>
           {object}
         </Typography>
       </Box>

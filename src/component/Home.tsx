@@ -34,7 +34,7 @@ const Home = () => {
               sx={{
                 textAlign: "center",
                 color: "white",
-                fontSize: { xs: "1rem", md: "1.5rem" },
+                fontSize: { xs: "1rem", sm: "1.5rem" },
                 lineHeight: { xs: 1.5, md: 1.7 },
               }}
             >
@@ -48,7 +48,12 @@ const Home = () => {
           <Box
             component="img"
             src={img}
-            sx={{ width: "30%", borderRadius: "50%", mb: 3, bgcolor: "white" }}
+            sx={{
+              width: { xs: "50%", sm: "30%", lg: "30%" },
+              borderRadius: "50%",
+              mb: 3,
+              bgcolor: "white",
+            }}
           />
         </CustomBox>
 

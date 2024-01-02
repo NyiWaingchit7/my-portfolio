@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        maxWidth: "1100px",
+        maxWidth: "800px",
         mx: "auto",
         p: 3,
         borderTop: "1px solid #7B89A8",
@@ -19,7 +19,7 @@ const Footer = () => {
       <Box
         sx={{
           display: "flex",
-          justifyContent: "space-around",
+          justifyContent: "space-between",
         }}
       >
         <Box sx={{ display: "flex", flexDirection: "column" }}>
