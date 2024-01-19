@@ -1,12 +1,10 @@
 import Image from "../pic/website-template-preview-162728.jpg";
-import News from "../pic/images.jpg";
-import restApi from "../pic/retina_1708x683_cover-5-new-things-rest-specification-b6d2c20296631ee2e258adff7f9766ea.png";
 import proverbs from "../pic/proverbs.png";
-import toDoList from "../pic/to-do-list-apps.png";
 import miniCommerce from "../pic/miniCommerce.jpg";
 import foodiePos from "../pic/foodiePos.png";
 import bird from "../pic/birds.png";
 import rdg from "../pic/bgpic.webp";
+import travel from "../pic/travel.png";
 
 export interface ProjectType {
   title: string;
@@ -37,7 +35,17 @@ export const projects: ProjectType[] = [
     tags: ["NextJs", "Material UI", "PostgreSql", "Next Auth"],
     source: "https://github.com/NyiWaingchit7/rdgNextJsFullStack",
     liveVersion: "https://rdg-next-js-full-stack.vercel.app/",
-    id: 8,
+    id: 2,
+  },
+  {
+    title: "Travelling",
+    description:
+      "It is Frontend only project. Explore the places and search where you want to go.",
+    image: travel,
+    tags: ["ReactJs", "Material UI(MUI)"],
+    source: "https://github.com/NyiWaingchit7/testdev",
+    liveVersion: "https://testdev-chi.vercel.app/",
+    id: 3,
   },
   {
     title: "Myanmar Proverbs",
@@ -46,7 +54,7 @@ export const projects: ProjectType[] = [
     tags: ["ReactJs", "Material UI(MUI)"],
     source: "https://github.com/NyiWaingchit7/myanmar-proverb-react.js",
     liveVersion: "https://proverbs-gamma.vercel.app/",
-    id: 2,
+    id: 4,
   },
   {
     title: "Birds",
@@ -56,7 +64,7 @@ export const projects: ProjectType[] = [
     tags: ["ReactJs", "Material UI(MUI)"],
     source: "https://github.com/NyiWaingchit7/Birds",
     liveVersion: "https://birds-eosin.vercel.app/",
-    id: 3,
+    id: 5,
   },
   // {
   //   title: "To-Do-List",
@@ -76,7 +84,7 @@ export const projects: ProjectType[] = [
     tags: ["NextJs", "PostgreSql", "Redux toolkit", "MaterialUi(MUI)"],
     source: "https://github.com/NyiWaingchit7/mini-commerce-next.js",
     liveVersion: "https://mini-commerce-next-js.vercel.app/",
-    id: 5,
+    id: 6,
   },
   // {
   //   title: "REST BOOK API Project",
@@ -88,16 +96,16 @@ export const projects: ProjectType[] = [
   //   liveVersion: "",
   //   id: 6,
   // },
-  {
-    title: "E-Commerce Website Laravel",
-    description:
-      "A fully responsive e-commerce website, built with Laravel,MySql database & JQuery.",
-    image: Image,
-    tags: ["java script", "laravel", "bootsrap", "mySql"],
-    source: "https://github.com/NyiWaingchit7/pos-project-with-laravel",
-    liveVersion: "",
-    id: 7,
-  },
+  // {
+  //   title: "E-Commerce Website Laravel",
+  //   description:
+  //     "A fully responsive e-commerce website, built with Laravel,MySql database & JQuery.",
+  //   image: Image,
+  //   tags: ["java script", "laravel", "bootsrap", "mySql"],
+  //   source: "https://github.com/NyiWaingchit7/pos-project-with-laravel",
+  //   liveVersion: "",
+  //   id: 7,
+  // },
   // {
   //   title: "News Media Project Laravel",
   //   description:

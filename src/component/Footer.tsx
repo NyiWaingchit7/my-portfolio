@@ -6,6 +6,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const Footer = () => {
   return (
     <Box
@@ -41,12 +42,20 @@ const Footer = () => {
               09757573132
             </Typography>
           </Box>
-          <Box style={{ display: "flex", alignItems: "center" }}>
-            <HomeIcon sx={{ mr: 2, color: "white" }} />
+          <Link
+            to="https://www.linkedin.com/in/nyi-waing-chit-a0492928a/"
+            target="_blink"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              textDecoration: "none",
+            }}
+          >
+            <LinkedInIcon sx={{ mr: 2, color: "white" }} />
             <Typography variant="body2" sx={{ color: "white", my: 1 }}>
-              Myeik, Thaninthary Region
+              LinedIn
             </Typography>
-          </Box>
+          </Link>
         </Box>
         <Box
           sx={{

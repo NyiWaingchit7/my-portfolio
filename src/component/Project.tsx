@@ -34,15 +34,15 @@ const Project = ({
             src={image}
             sx={{ width: "100%", maxHeight: 300, objectFit: "contain" }}
           />
-          <CardContent>
-            <Typography variant="h5" component="div">
-              {title}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {description}
-            </Typography>
-          </CardContent>
         </CardActionArea>
+        <CardContent sx={{ mt: 3 }}>
+          <Typography variant="h5" component="div">
+            {title}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            {description}
+          </Typography>
+        </CardContent>
         <CardActions sx={{ display: "flex", flexDirection: "column" }}>
           <Box
             sx={{
