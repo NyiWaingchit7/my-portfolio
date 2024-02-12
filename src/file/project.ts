@@ -1,10 +1,10 @@
-import Image from "../pic/website-template-preview-162728.jpg";
 import proverbs from "../pic/proverbs.png";
-import miniCommerce from "../pic/miniCommerce.jpg";
 import foodiePos from "../pic/foodiePos.png";
 import bird from "../pic/birds.png";
 import rdg from "../pic/bgpic.webp";
 import travel from "../pic/travel.png";
+import travelFullStack from "../pic/travelFullStack.png";
+import vape from "../pic/vapeShop.webp";
 
 export interface ProjectType {
   title: string;
@@ -38,24 +38,26 @@ export const projects: ProjectType[] = [
     id: 2,
   },
   {
-    title: "Travelling",
+    title: "Travelling (Full Stack)",
     description:
-      "It is Frontend only project. Explore the places and search where you want to go.",
-    image: travel,
-    tags: ["ReactJs", "Material UI(MUI)"],
-    source: "https://github.com/NyiWaingchit7/testdev",
-    liveVersion: "https://testdev-chi.vercel.app/",
+      "FullStack Project of Travelling guide. Expore the places and follow the link to see wonderfull things",
+    image: travelFullStack,
+    tags: ["NextJs", "Material UI", "PostgreSql", "Next Auth"],
+    source: "https://github.com/NyiWaingchit7/travel-NextJs-with-Kyaw-Zin-Thet",
+    liveVersion: "https://travel-next-js-with-kyaw-zin-thet.vercel.app/",
     id: 3,
   },
   {
-    title: "Myanmar Proverbs",
-    description: "Collections of maynmar proverbs and explanation.",
-    image: proverbs,
-    tags: ["ReactJs", "Material UI(MUI)"],
-    source: "https://github.com/NyiWaingchit7/myanmar-proverb-react.js",
-    liveVersion: "https://proverbs-gamma.vercel.app/",
+    title: "E-commerce(Frontend)",
+    description:
+      "It is Frontend only project.It has some kind of feature you could like .",
+    image: vape,
+    tags: ["ReactJs", "Tailwind CSS"],
+    source: "https://github.com/NyiWaingchit7/ecommerce-frontend",
+    liveVersion: "https://ecommerce-eta-beryl.vercel.app/",
     id: 4,
   },
+
   {
     title: "Birds",
     description:
@@ -66,6 +68,26 @@ export const projects: ProjectType[] = [
     liveVersion: "https://birds-eosin.vercel.app/",
     id: 5,
   },
+  {
+    title: "Travelling",
+    description:
+      "It is Frontend only project. Explore the places and search where you want to go.",
+    image: travel,
+    tags: ["ReactJs", "Material UI(MUI)"],
+    source: "https://github.com/NyiWaingchit7/testdev",
+    liveVersion: "https://testdev-chi.vercel.app/",
+    id: 6,
+  },
+  // {
+  //   title: "Myanmar Proverbs",
+  //   description: "Collections of maynmar proverbs and explanation.",
+  //   image: proverbs,
+  //   tags: ["ReactJs", "Material UI(MUI)"],
+  //   source: "https://github.com/NyiWaingchit7/myanmar-proverb-react.js",
+  //   liveVersion: "https://proverbs-gamma.vercel.app/",
+  //   id: 4,
+  // },
+
   // {
   //   title: "To-Do-List",
   //   description:
@@ -76,16 +98,16 @@ export const projects: ProjectType[] = [
   //   liveVersion: "https://to-do-list-with-next-js-pink.vercel.app/",
   //   id: 4,
   // },
-  {
-    title: "Mini E-commerce",
-    description:
-      "Mini E-commerce web and sample of ordering products . Using fake store api data , connecting with vercel server and backend CRUD operations and it is deployed on vercel.",
-    image: miniCommerce,
-    tags: ["NextJs", "PostgreSql", "Redux toolkit", "MaterialUi(MUI)"],
-    source: "https://github.com/NyiWaingchit7/mini-commerce-next.js",
-    liveVersion: "https://mini-commerce-next-js.vercel.app/",
-    id: 6,
-  },
+  // {
+  //   title: "Mini E-commerce",
+  //   description:
+  //     "Mini E-commerce web and sample of ordering products . Using fake store api data , connecting with vercel server and backend CRUD operations and it is deployed on vercel.",
+  //   image: miniCommerce,
+  //   tags: ["NextJs", "PostgreSql", "Redux toolkit", "MaterialUi(MUI)"],
+  //   source: "https://github.com/NyiWaingchit7/mini-commerce-next.js",
+  //   liveVersion: "https://mini-commerce-next-js.vercel.app/",
+  //   id: 6,
+  // },
   // {
   //   title: "REST BOOK API Project",
   //   description:
