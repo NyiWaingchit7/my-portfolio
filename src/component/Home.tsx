@@ -1,7 +1,4 @@
 import { Box, Slide, Typography, styled } from "@mui/material";
-
-import Experience from "./Experience";
-
 import img from "../pic/383784630_1052459922592359_848932231236809971_n.jpg";
 
 const Home = () => {
@@ -34,13 +31,7 @@ const Home = () => {
     >
       <Box>
         <CustomBox>
-          <Slide
-            direction="down"
-            in={true}
-            mountOnEnter
-            unmountOnExit
-            timeout={2000}
-          >
+          <Slide direction="down" in={true} mountOnEnter timeout={1500} exit>
             <Box sx={{ maxWidth: "800px" }}>
               <Typography
                 sx={{
@@ -63,7 +54,7 @@ const Home = () => {
             in={true}
             mountOnEnter
             unmountOnExit
-            timeout={2000}
+            timeout={2500}
           >
             <Box
               component="img"

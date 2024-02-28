@@ -6,6 +6,7 @@ import Footer from "./component/Footer";
 import { BrowserRouter } from "react-router-dom";
 import Objective from "./component/Objective";
 import Experience from "./component/Experience";
+import Project from "./component/Project";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Home />
         <Objective />
         <Experience />
+        <Project />
         <Footer />
       </BrowserRouter>
     </>

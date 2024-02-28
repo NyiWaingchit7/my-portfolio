@@ -2,13 +2,13 @@ import React from "react";
 import { IconType } from "../file/icon";
 import { Box, Typography } from "@mui/material";
 
-const Icon = ({ name, src }: IconType) => {
+const Icon = ({ name, src, bg }: IconType) => {
   return (
     <Box
       sx={{
-        maxWidth: 70,
-        mb: 3,
-        p: 3,
+        maxWidth: 90,
+        mb: 1,
+        p: 2,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -18,10 +18,11 @@ const Icon = ({ name, src }: IconType) => {
         component="img"
         src={src}
         sx={{
-          width: "100%",
+          width: "80px",
           borderRadius: "20px",
           height: 70,
           objectFit: "contain",
+          bgcolor: bg && bg,
         }}
       />
 

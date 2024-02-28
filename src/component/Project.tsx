@@ -1,105 +1,52 @@
-import React, { useState } from "react";
-import { ProjectType } from "../file/project";
+import { Box, Typography } from "@mui/material";
+import { projects } from "../file/project";
+import ProjectCard from "./ProjectCard";
 
-import {
-  Box,
-  Button,
-  Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Chip,
-  Typography,
-} from "@mui/material";
-import { Link } from "react-router-dom";
-
-const Project = ({
-  title,
-  tags,
-  image,
-  description,
-  source,
-  liveVersion,
-}: ProjectType) => {
-  const [target, setTarget] = useState("");
+const Project = () => {
   return (
-    <Box>
-      <Card
-        sx={{ maxWidth: 375, minHeight: { lg: 550, md: 550 }, margin: "1rem" }}
+    <Box id="project">
+      <Typography
+        sx={{
+          textAlign: "center",
+          color: "white",
+        }}
+        variant="h4"
+        id="text"
       >
-        <CardActionArea>
-          <CardMedia
-            component="img"
-            src={image}
-            sx={{ width: "100%", maxHeight: 300, objectFit: "contain" }}
-          />
-        </CardActionArea>
-        <CardContent sx={{ mt: 3 }}>
-          <Typography variant="h5" component="div">
-            {title}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {description}
-          </Typography>
-        </CardContent>
-        <CardActions sx={{ display: "flex", flexDirection: "column" }}>
-          <Box
-            sx={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "space-around",
-              mx: "auto",
-              mb: 3,
-            }}
-          >
-            <Link
-              to={source}
-              target={`${target}`}
-              onClick={() => {
-                source ? setTarget("_blank") : setTarget("");
-              }}
-            >
-              <Button
-                size="small"
-                style={{ backgroundColor: "rgba(0,199,255,255)" }}
-                variant="contained"
-              >
-                Source Code
-              </Button>
-            </Link>
-            <Link
-              to={liveVersion}
-              target={`${target}`}
-              onClick={() => {
-                liveVersion ? setTarget("_blank") : setTarget("");
-              }}
-            >
-              <Button
-                size="small"
-                style={{ backgroundColor: "rgba(0,199,255,255)" }}
-                variant="contained"
-              >
-                Live Version
-              </Button>
-            </Link>
-          </Box>
-          <Box
-            sx={{
-              width: "100%",
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "10px",
-              mb: 2,
-            }}
-          >
-            {tags.map((t) => {
-              return <Chip label={t} variant="outlined" key={t} />;
-            })}
-          </Box>
-        </CardActions>
-      </Card>
+        Projects
+      </Typography>
+      <Typography
+        variant="h5"
+        sx={{ textAlign: "center", color: "white", mt: 5 }}
+      >
+        Let's take a look at what I have {""}
+        <span style={{ color: "rgba(0,199,255,255)" }}>built</span> so far
+      </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          mt: 5,
+        }}
+      >
+        {projects.map((p) => {
+          return (
+            <ProjectCard
+              key={p.id}
+              title={p.title}
+              tags={p.tags}
+              description={p.description}
+              image={p.image}
+              source={p.source}
+              liveVersion={p.liveVersion}
+              id={p.id}
+            />
+          );
+        })}
+      </Box>
     </Box>
   );
 };
+
 export default Project;
