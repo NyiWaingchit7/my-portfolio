@@ -1,16 +1,13 @@
-import { Box, Typography, styled } from "@mui/material";
-import { obj } from "../file/object";
+import { Box, Slide, Typography, styled } from "@mui/material";
+
 import Experience from "./Experience";
-import Objective from "./Objective";
+
 import img from "../pic/383784630_1052459922592359_848932231236809971_n.jpg";
 
 const Home = () => {
   const CustomBox = styled(Box)(({ theme }) => ({
     maxWidth: "1200px",
     mx: "auto",
-    mt: 8,
-    mb: 5,
-    p: 5,
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
@@ -26,68 +23,62 @@ const Home = () => {
   }));
 
   return (
-    <Box sx={{ display: "flex", justifyContent: "center", p: 2 }}>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        p: 2,
+        minHeight: "fit-content",
+      }}
+    >
       <Box>
         <CustomBox>
-          <Box sx={{ maxWidth: "800px" }}>
-            <Typography
+          <Slide
+            direction="down"
+            in={true}
+            mountOnEnter
+            unmountOnExit
+            timeout={2000}
+          >
+            <Box sx={{ maxWidth: "800px" }}>
+              <Typography
+                sx={{
+                  textAlign: "center",
+                  color: "white",
+                  fontSize: { xs: "1rem", sm: "1.5rem" },
+                  lineHeight: { xs: 1.5, md: 1.7 },
+                }}
+              >
+                Hello there! I'm Nyi Waing Chit, a passionate and ambitious web
+                developer. As you navigate through my portfolio, you'll discover
+                the perfect blend of creativity, innovation, and technical
+                prowess.
+              </Typography>
+            </Box>
+          </Slide>
+
+          <Slide
+            direction="down"
+            in={true}
+            mountOnEnter
+            unmountOnExit
+            timeout={2000}
+          >
+            <Box
+              component="img"
+              src={img}
               sx={{
-                textAlign: "center",
-                color: "white",
-                fontSize: { xs: "1rem", sm: "1.5rem" },
-                lineHeight: { xs: 1.5, md: 1.7 },
+                width: { xs: "50%", sm: "30%", lg: "30%" },
+                borderRadius: "50%",
+                mb: 3,
+                bgcolor: "white",
+                boxShadow: 3,
+                p: 0.2,
               }}
-            >
-              Hello there! I'm Nyi Waing Chit, a passionate and ambitious web
-              developer. As you navigate through my portfolio, you'll discover
-              the perfect blend of creativity, innovation, and technical
-              prowess.
-            </Typography>
-          </Box>
-
-          <Box
-            component="img"
-            src={img}
-            sx={{
-              width: { xs: "50%", sm: "30%", lg: "30%" },
-              borderRadius: "50%",
-              mb: 3,
-              bgcolor: "white",
-            }}
-          />
+            />
+          </Slide>
         </CustomBox>
-
-        <Box
-          sx={{
-            borderTop: "1px solid #7B89A8",
-            maxWidth: "1100px",
-            mt: 7,
-            mx: "auto",
-          }}
-          id="objective"
-        >
-          <Typography
-            variant="h4"
-            color="white"
-            sx={{ width: "100%", textAlign: "center", mt: 8, mb: 3 }}
-          >
-            Objectives
-          </Typography>
-          <Box
-            sx={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "center",
-            }}
-          >
-            {obj.map((o) => {
-              return <Objective object={o} key={o} />;
-            })}
-          </Box>
-        </Box>
-        <Box sx={{ borderTop: "1px solid #7B89A8" }} id="about">
-          <Experience />
-        </Box>
       </Box>
     </Box>
   );

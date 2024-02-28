@@ -13,11 +13,25 @@ const Experience = () => {
     },
   }));
   return (
-    <Box sx={{ maxWidth: "1300px", my: 8, mx: "auto" }}>
+    <Box
+      sx={{
+        maxWidth: "1300px",
+        my: 8,
+        mx: "auto",
+        borderTop: "1px solid #7B89A8",
+        minHeight: "fit-content",
+      }}
+      id="about"
+    >
       <Box>
         <Typography
-          sx={{ textAlign: "center", color: "white", my: 5 }}
-          variant="h4"
+          sx={{
+            textAlign: "center",
+            color: "white",
+            my: 5,
+            fontSize: { md: "2rem" },
+          }}
+          variant="h5"
         >
           About
         </Typography>

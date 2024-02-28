@@ -98,7 +98,7 @@ const Navbar = () => {
                 margin: "10px",
               }}
               smooth
-              offset={-80}
+              offset={-110}
             >
               <Typography> About </Typography>
             </Link>

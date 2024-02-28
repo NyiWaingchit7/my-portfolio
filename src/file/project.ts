@@ -1,10 +1,10 @@
-import proverbs from "../pic/proverbs.png";
 import foodiePos from "../pic/foodiePos.png";
 import bird from "../pic/birds.png";
 import rdg from "../pic/bgpic.webp";
 import travel from "../pic/travel.png";
 import travelFullStack from "../pic/travelFullStack.png";
 import vape from "../pic/vapeShop.webp";
+import youtube from "../pic/youTube.png";
 
 export interface ProjectType {
   title: string;
@@ -77,6 +77,16 @@ export const projects: ProjectType[] = [
     source: "https://github.com/NyiWaingchit7/testdev",
     liveVersion: "https://testdev-chi.vercel.app/",
     id: 6,
+  },
+  {
+    title: "You Tube Clone",
+    description:
+      "Clonning youtube web and fetch data from rapid api to show data.Resposive web design and it is deplyed on vercel",
+    image: youtube,
+    tags: ["ReactJs", "Material UI(MUI)", "RapidApi"],
+    source: "https://github.com/NyiWaingchit7/youTubeClone",
+    liveVersion: "https://clone-youtube-peach.vercel.app/",
+    id: 7,
   },
   // {
   //   title: "Myanmar Proverbs",
