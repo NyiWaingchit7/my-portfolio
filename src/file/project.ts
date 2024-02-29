@@ -3,7 +3,7 @@ import bird from "../pic/birds.png";
 import rdg from "../pic/bgpic.webp";
 import travel from "../pic/travel.png";
 import travelFullStack from "../pic/travelFullStack.png";
-import vape from "../pic/vapeShop.webp";
+import vape from "../pic/vapeShop.jpg";
 import youtube from "../pic/youTube.png";
 
 export interface ProjectType {

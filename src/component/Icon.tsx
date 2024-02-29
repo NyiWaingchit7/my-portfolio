@@ -18,7 +18,7 @@ const Icon = ({ name, src, bg }: IconType) => {
         component="img"
         src={src}
         sx={{
-          width: "80px",
+          width: { xs: "50px", md: "80px" },
           borderRadius: "20px",
           height: 70,
           objectFit: "contain",
