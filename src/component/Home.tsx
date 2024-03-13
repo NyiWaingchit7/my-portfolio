@@ -1,4 +1,4 @@
-import { Box, Slide, Typography, styled } from "@mui/material";
+import { Box, Slide, Typography, Zoom, styled } from "@mui/material";
 import img from "../pic/383784630_1052459922592359_848932231236809971_n.jpg";
 
 const Home = () => {
@@ -31,7 +31,7 @@ const Home = () => {
     >
       <Box>
         <CustomBox>
-          <Slide direction="down" in={true} mountOnEnter timeout={1500} exit>
+          <Zoom in={true} appear={true} timeout={2000}>
             <Box sx={{ maxWidth: "800px" }}>
               <Typography
                 sx={{
@@ -41,21 +41,35 @@ const Home = () => {
                   lineHeight: { xs: 1.5, md: 1.7 },
                 }}
               >
-                Hello there! I'm Nyi Waing Chit, a passionate and ambitious web
-                developer. As you navigate through my portfolio, you'll discover
-                the perfect blend of creativity, innovation, and technical
-                prowess.
+                Hello there! I'm{" "}
+                <Typography
+                  sx={{
+                    display: "inline",
+                    fontSize: { xs: "1.2rem", sm: "1.5rem" },
+                    fontWeight: "bold",
+                    color: "#00C7FF",
+                  }}
+                >
+                  Nyi Waing Chit
+                </Typography>{" "}
+                , a passionate{" "}
+                <Typography
+                  sx={{
+                    display: "inline",
+                    fontSize: { xs: "1.2rem", sm: "1.5rem" },
+                    fontWeight: "bold",
+                    color: "#00C7FF",
+                  }}
+                >
+                  Web Developer
+                </Typography>{" "}
+                . As you navigate through my portfolio, you'll discover the
+                perfect blend of creativity, innovation, and technical prowess.
               </Typography>
             </Box>
-          </Slide>
+          </Zoom>
 
-          <Slide
-            direction="down"
-            in={true}
-            mountOnEnter
-            unmountOnExit
-            timeout={2500}
-          >
+          <Zoom in={true} appear={true} timeout={2000}>
             <Box
               component="img"
               src={img}
@@ -68,7 +82,7 @@ const Home = () => {
                 p: 0.2,
               }}
             />
-          </Slide>
+          </Zoom>
         </CustomBox>
       </Box>
     </Box>

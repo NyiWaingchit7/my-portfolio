@@ -75,7 +75,7 @@ const ProjectCard = ({
               display: "flex",
               width: "100%",
               flexDirection: "column",
-              height: "100px",
+              height: "150px",
               position: "absolute",
               bottom: 0,
 
