@@ -23,6 +23,10 @@ const Icon = ({ name, src, bg }: IconType) => {
           height: 70,
           objectFit: "contain",
           bgcolor: bg && bg,
+          ":hover": {
+            transform: "scale(1.2)",
+          },
+          transition: "all ease-in 0.5s",
         }}
       />
 

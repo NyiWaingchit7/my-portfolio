@@ -2,7 +2,11 @@ import { AppBar, Box, Typography, styled } from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
 import { Link } from "react-scroll";
 
-const Navbar = () => {
+interface prop {
+  selected: string;
+  setSelected: (d: string) => void;
+}
+const Navbar = ({ selected, setSelected }: prop) => {
   const CustomBox = styled(Box)(({ theme }) => ({
     display: "flex",
     alignItems: "center",
@@ -21,6 +25,7 @@ const Navbar = () => {
       flexDirection: "column",
     },
   }));
+
   return (
     <Box
       sx={{
@@ -64,58 +69,27 @@ const Navbar = () => {
           </Box>
 
           <CustomBox>
-            <Link
-              to="home"
-              style={{
-                textDecoration: "none",
-                color: "white",
-                cursor: "pointer",
-                margin: "10px",
-              }}
-              smooth
-            >
-              <Typography> Home </Typography>
-            </Link>
-            <Link
-              to="objective"
-              style={{
-                textDecoration: "none",
-                color: "white",
-                cursor: "pointer",
-                margin: "10px",
-              }}
-              smooth
-              offset={-100}
-            >
-              <Typography> Objective </Typography>
-            </Link>
-            <Link
-              to="about"
-              style={{
-                textDecoration: "none",
-                color: "white",
-                cursor: "pointer",
-                margin: "10px",
-              }}
-              smooth
-              offset={-110}
-            >
-              <Typography> About </Typography>
-            </Link>
-
-            <Link
-              to="project"
-              style={{
-                textDecoration: "none",
-                color: "white",
-                cursor: "pointer",
-                margin: "10px",
-              }}
-              smooth
-              offset={-150}
-            >
-              <Typography> Projects </Typography>
-            </Link>
+            {navItems.map((d) => (
+              <Link
+                key={d.id}
+                to={d.to}
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  cursor: "pointer",
+                  margin: "10px",
+                }}
+                smooth
+                offset={d.offset}
+                onClick={() => setSelected(d.name)}
+              >
+                <Typography
+                  sx={{ color: selected === d.name ? "#00C7FF" : "white" }}
+                >
+                  {d.name}
+                </Typography>
+              </Link>
+            ))}
           </CustomBox>
         </CustomToolbar>
       </AppBar>
@@ -123,3 +97,30 @@ const Navbar = () => {
   );
 };
 export default Navbar;
+
+export const navItems = [
+  {
+    id: 1,
+    name: "Home",
+    to: "home",
+    offset: 0,
+  },
+  {
+    id: 2,
+    name: "Objective",
+    to: "objective",
+    offset: -90,
+  },
+  {
+    id: 3,
+    name: "About",
+    to: "about",
+    offset: -110,
+  },
+  {
+    id: 4,
+    name: "Projects",
+    to: "project",
+    offset: -150,
+  },
+];

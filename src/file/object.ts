@@ -1,5 +1,5 @@
 export const obj: string[] = [
-  "I possess strong skills in HTML, CSS, JavaScript, PHP and familiarity with popular web development frameworks such as   React.js,NextJs, Laravel and Express.js.",
+  "I possess strong skills in HTML, CSS, JavaScript, TypeScript, NodeJs and familiarity with popular web development frameworks such as   React.js,NextJs, Express.js, Bootstrap, TailwindCSS and Material UI.",
 
   "I am deeply passionate about web development and its power to create engaging and interactive online experiences.",
 

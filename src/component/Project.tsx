@@ -1,10 +1,13 @@
 import { Box, Typography } from "@mui/material";
 import { projects } from "../file/project";
 import ProjectCard from "./ProjectCard";
-
-const Project = () => {
+interface prop {
+  selected: string;
+  setSelected: (d: string) => void;
+}
+const Project = ({ selected, setSelected }: prop) => {
   return (
-    <Box id="project">
+    <Box id="project" onMouseOver={() => setSelected("Projects")}>
       <Typography
         sx={{
           textAlign: "center",

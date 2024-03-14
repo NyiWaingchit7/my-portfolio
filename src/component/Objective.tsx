@@ -1,8 +1,11 @@
-import { Box, Stack, styled } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { obj } from "../file/object";
-
-const Objective = () => {
+interface prop {
+  selected: string;
+  setSelected: (d: string) => void;
+}
+const Objective = ({ selected, setSelected }: prop) => {
   return (
     <Box
       sx={{
@@ -13,6 +16,7 @@ const Objective = () => {
         minHeight: "fit-content",
       }}
       id="objective"
+      onMouseOver={() => setSelected("Objective")}
     >
       <Typography
         variant="h5"
@@ -44,21 +48,23 @@ const Objective = () => {
                 sx={{
                   backgroundColor: "#000F2E",
 
-                  border: "1px solid #00C7FF",
+                  border: "2px solid #00C7FF",
                   borderRadius: "10px",
-                  maxWidth: { xs: "250px", md: "400px" },
-                  minHeight: "100px",
+                  maxWidth: { xs: "300px", md: "400px" },
+                  minHeight: "150px",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                   p: 2,
+                  ":hover": {
+                    borderColor: "#7B89A8",
+                  },
                 }}
               >
-                {" "}
                 <Typography
                   sx={{
                     color: "white",
-                    lineHeight: 1.5,
+                    lineHeight: 1.7,
                     fontSize: { xs: "0.8rem", md: "1rem" },
                   }}
                 >

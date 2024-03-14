@@ -18,8 +18,8 @@ export const icons: IconType[] = [
   },
   {
     id: 4,
-    name: "React",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    name: "NodeJS",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
   {
     id: 9,
@@ -30,16 +30,21 @@ export const icons: IconType[] = [
 
   {
     id: 6,
-    name: "NodeJS",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    name: "ReactJs",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
     id: 7,
+    name: "ExpressJs",
+    src: "https://miro.medium.com/v2/resize:fit:679/0*vq-JSMynSHUPXx70",
+  },
+  {
+    id: 8,
     name: "Tailwind",
     src: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
   },
   {
-    id: 8,
+    id: 9,
     name: "Material UI",
     src: "https://cdn.worldvectorlogo.com/logos/material-ui-1.svg",
   },

@@ -2,8 +2,11 @@ import { Box, Stack, Typography, styled } from "@mui/material";
 
 import { icons } from "../file/icon";
 import Icon from "./Icon";
-
-const Experience = () => {
+interface prop {
+  selected: string;
+  setSelected: (d: string) => void;
+}
+const Skill = ({ selected, setSelected }: prop) => {
   const MainBox = styled(Box)(({ theme }) => ({
     maxWidth: "1200px",
     [theme.breakpoints.down("md")]: {
@@ -21,6 +24,7 @@ const Experience = () => {
         minHeight: "fit-content",
       }}
       id="about"
+      onMouseOver={() => setSelected("About")}
     >
       <Box>
         <Typography
@@ -49,6 +53,7 @@ const Experience = () => {
                 p: 1,
                 flexWrap: { md: "wrap" },
                 justifyContent: { md: "center" },
+                gap: 2,
               }}
             >
               {icons.map((i) => {
@@ -70,4 +75,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Skill;
