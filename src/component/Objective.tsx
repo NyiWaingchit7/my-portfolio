@@ -15,7 +15,7 @@ const Objective = ({ selected, setSelected }: prop) => {
         mx: "auto",
         minHeight: "fit-content",
       }}
-      id="objective"
+      id="about"
       onMouseOver={() => setSelected("Objective")}
     >
       <Typography
@@ -29,7 +29,7 @@ const Objective = ({ selected, setSelected }: prop) => {
           fontSize: { md: "2rem" },
         }}
       >
-        Objectives
+        About
       </Typography>
       <Stack
         direction="row"
@@ -51,7 +51,7 @@ const Objective = ({ selected, setSelected }: prop) => {
                   border: "2px solid #00C7FF",
                   borderRadius: "10px",
                   maxWidth: { xs: "300px", md: "400px" },
-                  minHeight: "150px",
+                  minHeight: { xs: "160px", sm: "170px" },
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",

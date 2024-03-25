@@ -107,20 +107,15 @@ export const navItems = [
   },
   {
     id: 2,
-    name: "Objective",
-    to: "objective",
-    offset: -90,
-  },
-  {
-    id: 3,
     name: "About",
     to: "about",
-    offset: -110,
+    offset: -90,
   },
+
   {
-    id: 4,
+    id: 3,
     name: "Projects",
     to: "project",
-    offset: -150,
+    offset: -100,
   },
 ];

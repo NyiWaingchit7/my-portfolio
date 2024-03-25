@@ -7,24 +7,29 @@ interface prop {
 }
 const Project = ({ selected, setSelected }: prop) => {
   return (
-    <Box id="project" onMouseOver={() => setSelected("Projects")}>
+    <Box
+      id="project"
+      onMouseOver={() => setSelected("Projects")}
+      sx={{
+        borderTop: "1px solid #7B89A8",
+        maxWidth: "1100px",
+
+        mx: "auto",
+        minHeight: "fit-content",
+      }}
+    >
       <Typography
         sx={{
           textAlign: "center",
           color: "white",
+          mt: 3,
         }}
         variant="h4"
         id="text"
       >
         Projects
       </Typography>
-      <Typography
-        variant="h5"
-        sx={{ textAlign: "center", color: "white", mt: 5 }}
-      >
-        Let's take a look at what I have {""}
-        <span style={{ color: "rgba(0,199,255,255)" }}>built</span> so far
-      </Typography>
+
       <Box
         sx={{
           display: "flex",

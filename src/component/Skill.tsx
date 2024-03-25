@@ -20,27 +20,15 @@ const Skill = ({ selected, setSelected }: prop) => {
         maxWidth: "1300px",
         my: 8,
         mx: "auto",
-        borderTop: "1px solid #7B89A8",
+
         minHeight: "fit-content",
       }}
-      id="about"
       onMouseOver={() => setSelected("About")}
     >
       <Box>
-        <Typography
-          sx={{
-            textAlign: "center",
-            color: "white",
-            my: 5,
-            fontSize: { md: "2rem" },
-          }}
-          variant="h5"
-        >
-          About
-        </Typography>
         <Typography variant="h5" sx={{ textAlign: "center", color: "white" }}>
-          I can help you with this following
-          <span style={{ color: "rgba(0,199,255,255)" }}> skills</span> I've
+          Here are the
+          <span style={{ color: "rgba(0,199,255,255)" }}> Tech Stack</span> I've
           learned
         </Typography>
         <Box sx={{ justifyContent: "center", my: 2 }}>

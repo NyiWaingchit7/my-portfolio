@@ -15,8 +15,8 @@ function App() {
       <BrowserRouter>
         <Navbar selected={selected} setSelected={setSelected} />
         <Home selected={selected} setSelected={setSelected} />
-        <Objective selected={selected} setSelected={setSelected} />
         <Skill selected={selected} setSelected={setSelected} />
+        <Objective selected={selected} setSelected={setSelected} />
         <Project selected={selected} setSelected={setSelected} />
         <Footer />
       </BrowserRouter>

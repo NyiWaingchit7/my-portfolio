@@ -33,7 +33,7 @@ const Home = ({ selected, setSelected }: prop) => {
         cursor: "pointer",
         mb: 3,
       }}
-      onMouseOver={() => setSelected("Home")}
+      onMouseEnter={() => setSelected("Home")}
     >
       <Box>
         <CustomBox>
@@ -48,8 +48,8 @@ const Home = ({ selected, setSelected }: prop) => {
             >
               Hello there! I'm{" "}
               <Typography
+                variantMapping={{ body1: "span" }}
                 sx={{
-                  display: "inline",
                   fontSize: { xs: "1.2rem", sm: "1.5rem" },
                   fontWeight: "bold",
                   color: "#00C7FF",
@@ -59,8 +59,8 @@ const Home = ({ selected, setSelected }: prop) => {
               </Typography>{" "}
               , a passionate{" "}
               <Typography
+                variantMapping={{ body1: "span" }}
                 sx={{
-                  display: "inline",
                   fontSize: { xs: "1.2rem", sm: "1.5rem" },
                   fontWeight: "bold",
                   color: "#00C7FF",

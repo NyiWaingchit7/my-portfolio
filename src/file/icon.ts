@@ -1,4 +1,3 @@
-import nextJs from "../pic/nextjs-logo-square.webp";
 export interface IconType {
   id: number;
   name: string;
@@ -22,7 +21,7 @@ export const icons: IconType[] = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
   {
-    id: 9,
+    id: 1,
     name: "NextJs",
     src: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
     bg: "white",
