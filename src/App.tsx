@@ -6,12 +6,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Project from "./component/Project";
 import Layout from "./component/Layout";
+import ScrollTop from "./component/ScrollTop";
 
 function App() {
-  const [selected, setSelected] = useState("Home");
   return (
     <>
       <BrowserRouter>
+        <ScrollTop />
         <Layout>
           <Routes>
             <Route path="/" Component={Home} />

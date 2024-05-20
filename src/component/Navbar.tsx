@@ -1,6 +1,6 @@
 import { AppBar, Box, Typography, styled } from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 interface prop {
   selected?: string;
@@ -70,7 +70,7 @@ const Navbar = ({ selected, setSelected }: prop) => {
 
           <CustomBox>
             {navItems.map((d) => (
-              <Link
+              <NavLink
                 key={d.id}
                 to={d.to}
                 style={{
@@ -86,7 +86,7 @@ const Navbar = ({ selected, setSelected }: prop) => {
                 >
                   {d.name}
                 </Typography>
-              </Link>
+              </NavLink>
             ))}
           </CustomBox>
         </CustomToolbar>
