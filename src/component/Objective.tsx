@@ -2,7 +2,7 @@ import { Box, Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { obj } from "../file/object";
 interface prop {
-  selected: string;
+  selected?: string;
   setSelected: (d: string) => void;
 }
 const Objective = ({ selected, setSelected }: prop) => {

@@ -3,7 +3,7 @@ import { Box, Stack, Typography, styled } from "@mui/material";
 import { icons } from "../file/icon";
 import Icon from "./Icon";
 interface prop {
-  selected: string;
+  selected?: string;
   setSelected: (d: string) => void;
 }
 const Skill = ({ selected, setSelected }: prop) => {

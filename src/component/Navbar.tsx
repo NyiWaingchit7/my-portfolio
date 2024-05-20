@@ -1,9 +1,9 @@
 import { AppBar, Box, Typography, styled } from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 interface prop {
-  selected: string;
+  selected?: string;
   setSelected: (d: string) => void;
 }
 const Navbar = ({ selected, setSelected }: prop) => {
@@ -34,7 +34,7 @@ const Navbar = ({ selected, setSelected }: prop) => {
         px: 5,
         maxWidth: "1200px",
         mx: "auto",
-        mb: 20,
+        mb: 7,
       }}
       id="home"
     >
@@ -79,8 +79,6 @@ const Navbar = ({ selected, setSelected }: prop) => {
                   cursor: "pointer",
                   margin: "10px",
                 }}
-                smooth
-                offset={d.offset}
                 onClick={() => setSelected(d.name)}
               >
                 <Typography
@@ -102,20 +100,11 @@ export const navItems = [
   {
     id: 1,
     name: "Home",
-    to: "home",
-    offset: 0,
+    to: "/",
   },
   {
     id: 2,
-    name: "About",
-    to: "about",
-    offset: -90,
-  },
-
-  {
-    id: 3,
     name: "Projects",
-    to: "project",
-    offset: -100,
+    to: "projects",
   },
 ];

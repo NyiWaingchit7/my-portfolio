@@ -69,7 +69,7 @@ const ProjectCard = ({
             </Typography>
           </CardContent>
         </Fade>
-        <Slide direction="up" in={show} unmountOnExit timeout={500}>
+        <Slide direction="up" in={show} unmountOnExit timeout={1000}>
           <CardActions
             sx={{
               display: "flex",

@@ -2,18 +2,16 @@ import { Box, Typography } from "@mui/material";
 import { projects } from "../file/project";
 import ProjectCard from "./ProjectCard";
 interface prop {
-  selected: string;
-  setSelected: (d: string) => void;
+  selected?: string;
+  setSelected?: (d: string) => void;
 }
 const Project = ({ selected, setSelected }: prop) => {
   return (
     <Box
       id="project"
-      onMouseOver={() => setSelected("Projects")}
+      // onMouseOver={() => setSelected("Projects")}
       sx={{
-        borderTop: "1px solid #7B89A8",
-        maxWidth: "1100px",
-
+        maxWidth: "95vw",
         mx: "auto",
         minHeight: "fit-content",
       }}
@@ -22,7 +20,6 @@ const Project = ({ selected, setSelected }: prop) => {
         sx={{
           textAlign: "center",
           color: "white",
-          mt: 3,
         }}
         variant="h4"
         id="text"
@@ -35,7 +32,7 @@ const Project = ({ selected, setSelected }: prop) => {
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
-          mt: 5,
+          mt: 2,
         }}
       >
         {projects.map((p) => {
