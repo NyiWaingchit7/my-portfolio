@@ -7,8 +7,6 @@ const Icon = ({ name, src, bg }: IconType) => {
     <Box
       sx={{
         maxWidth: 90,
-        mb: 1,
-        p: 2,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -18,9 +16,9 @@ const Icon = ({ name, src, bg }: IconType) => {
         component="img"
         src={src}
         sx={{
-          width: { xs: "50px", md: "80px" },
+          width: { xs: "60px", md: "80px" },
           borderRadius: "20px",
-          height: 70,
+          height: 50,
           objectFit: "contain",
           bgcolor: bg && bg,
           ":hover": {
@@ -32,7 +30,12 @@ const Icon = ({ name, src, bg }: IconType) => {
 
       <Typography
         variant="body1"
-        sx={{ color: "white", mt: 1, textAlign: "center" }}
+        sx={{
+          color: "white",
+          mt: 1,
+          textAlign: "center",
+          fontSize: { xs: "0.8rem", sm: "1rem" },
+        }}
       >
         {name}
       </Typography>

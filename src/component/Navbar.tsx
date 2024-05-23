@@ -7,34 +7,13 @@ interface prop {
   setSelected: (d: string) => void;
 }
 const Navbar = ({ selected, setSelected }: prop) => {
-  const CustomBox = styled(Box)(({ theme }) => ({
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-
-    [theme.breakpoints.down("sm")]: {
-      marginTop: "2rem",
-    },
-  }));
-
-  const CustomToolbar = styled(Box)(({ theme }) => ({
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    [theme.breakpoints.down("sm")]: {
-      flexDirection: "column",
-    },
-  }));
-
   return (
     <Box
       sx={{
         flexGrow: 1,
-        py: 2,
-        px: 5,
+        p: 3,
         maxWidth: "1200px",
         mx: "auto",
-        mb: 7,
       }}
       id="home"
     >
@@ -42,10 +21,15 @@ const Navbar = ({ selected, setSelected }: prop) => {
         style={{
           backgroundColor: "rgba(0, 10, 31, 255)",
           boxShadow: "none",
-          padding: "20px",
         }}
       >
-        <CustomToolbar>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
           <Box
             sx={{
               display: "flex",
@@ -68,7 +52,13 @@ const Navbar = ({ selected, setSelected }: prop) => {
             </Typography>
           </Box>
 
-          <CustomBox>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             {navItems.map((d) => (
               <NavLink
                 key={d.id}
@@ -88,8 +78,8 @@ const Navbar = ({ selected, setSelected }: prop) => {
                 </Typography>
               </NavLink>
             ))}
-          </CustomBox>
-        </CustomToolbar>
+          </Box>
+        </Box>
       </AppBar>
     </Box>
   );
@@ -105,6 +95,6 @@ export const navItems = [
   {
     id: 2,
     name: "Projects",
-    to: "projects",
+    to: "/projects",
   },
 ];

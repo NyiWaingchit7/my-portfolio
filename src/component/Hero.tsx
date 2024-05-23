@@ -33,6 +33,7 @@ const Hero = ({ selected, setSelected }: prop) => {
         minHeight: "fit-content",
         cursor: "pointer",
         mb: 2,
+        mt: 2,
       }}
       ref={elementRef}
       onMouseEnter={() => setSelected("Home")}

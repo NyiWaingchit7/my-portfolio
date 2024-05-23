@@ -15,35 +15,31 @@ const Footer = () => {
         mx: "auto",
         p: 3,
         borderTop: "1px solid #7B89A8",
+        display: "flex",
+        justifyContent: "space-evenly",
+        flexDirection: { xs: "column", sm: "row" },
+        gap: 2,
       }}
     >
+      <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+        <PhoneIcon sx={{ color: "white" }} />
+        <Typography sx={{ color: "white" }}>09757573132</Typography>
+      </Box>
+      <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+        <EmailIcon sx={{ color: "white" }} />
+        <Typography sx={{ color: "white" }}>nyiwaingchit5@gmail.com</Typography>
+      </Box>
       <Box
         sx={{
           display: "flex",
-          justifyContent: "space-between",
+          alignItems: "center",
+          gap: 2,
         }}
       >
-        <Box sx={{ display: "flex", flexDirection: "column" }}>
-          <Typography
-            variant="h6"
-            sx={{ textAlign: "center", color: "white", my: 2 }}
-          >
-            Contact me
-          </Typography>
-          <Box style={{ display: "flex", alignItems: "center" }}>
-            <EmailIcon sx={{ mr: 2, color: "white" }} />
-            <Typography variant="body2" sx={{ color: "white", my: 1 }}>
-              Nyiwaingchit5@gmail.com
-            </Typography>
-          </Box>
-          <Box style={{ display: "flex", alignItems: "center" }}>
-            <PhoneIcon sx={{ mr: 2, color: "white" }} />
-            <Typography variant="body2" sx={{ color: "white", my: 1 }}>
-              09757573132
-            </Typography>
-          </Box>
+        {footerIcon.map((d) => (
           <Link
-            to="https://www.linkedin.com/in/nyi-waing-chit-a0492928a/"
+            key={d.id}
+            to={d.link}
             target="_blink"
             style={{
               display: "flex",
@@ -51,69 +47,33 @@ const Footer = () => {
               textDecoration: "none",
             }}
           >
-            <LinkedInIcon sx={{ mr: 2, color: "white" }} />
-            <Typography variant="body2" sx={{ color: "white", my: 1 }}>
-              LinedIn
-            </Typography>
+            {d.icon}
           </Link>
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          <Typography
-            variant="h6"
-            sx={{ textAlign: "center", color: "white", my: 2 }}
-          >
-            Social
-          </Typography>
-          <Link
-            to="https://web.facebook.com/Chit.24007"
-            target="_blink"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              textDecoration: "none",
-            }}
-          >
-            <FacebookIcon sx={{ mr: 2, color: "white" }} />
-            <Typography variant="body2" sx={{ color: "white", my: 1 }}>
-              Facebook
-            </Typography>
-          </Link>
-          <Link
-            to="https://www.instagram.com/nyiwaingchit/"
-            target="_blink"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              textDecoration: "none",
-            }}
-          >
-            <InstagramIcon sx={{ mr: 2, color: "white" }} />
-            <Typography variant="body2" sx={{ color: "white", my: 1 }}>
-              Instagram
-            </Typography>
-          </Link>
-          <Link
-            to="https://github.com/NyiWaingchit7"
-            target="_blink"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              textDecoration: "none",
-            }}
-          >
-            <GitHubIcon sx={{ mr: 2, color: "white" }} />
-            <Typography variant="body2" sx={{ color: "white", my: 1 }}>
-              Github
-            </Typography>
-          </Link>
-        </Box>
+        ))}
       </Box>
     </Box>
   );
 };
 export default Footer;
+export const footerIcon = [
+  {
+    id: 1,
+    icon: <GitHubIcon sx={{ color: "white" }} />,
+    link: "https://github.com/NyiWaingchit7",
+  },
+  {
+    id: 2,
+    icon: <FacebookIcon sx={{ color: "white" }} />,
+    link: "https://web.facebook.com/Chit.24007",
+  },
+  {
+    id: 3,
+    icon: <InstagramIcon sx={{ color: "white" }} />,
+    link: "https://www.instagram.com/nyiwaingchit/",
+  },
+  {
+    id: 4,
+    icon: <LinkedInIcon sx={{ color: "white" }} />,
+    link: "https://www.linkedin.com/in/nyi-waing-chit-a0492928a/",
+  },
+];

@@ -24,8 +24,8 @@ const Objective = ({ selected, setSelected }: prop) => {
         sx={{
           width: "100%",
           textAlign: "center",
-          mt: 8,
-          mb: 3,
+          mt: 2,
+
           fontSize: { md: "2rem" },
         }}
       >
@@ -47,7 +47,6 @@ const Objective = ({ selected, setSelected }: prop) => {
               <Box
                 sx={{
                   backgroundColor: "#000F2E",
-
                   border: "2px solid #00C7FF",
                   borderRadius: "10px",
                   maxWidth: { xs: "300px", md: "400px" },

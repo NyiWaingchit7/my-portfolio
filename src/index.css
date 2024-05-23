@@ -18,13 +18,13 @@ body {
 
 ::-webkit-scrollbar {
   width: 0px;
-  height: 3px;
+  height: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: rgb(114, 113, 113);
   border-radius: 10px;
-  height: 200px;
+  height: 80px;
 }
 
 ::-webkit-scrollbar-track {

@@ -7,32 +7,30 @@ interface prop {
   setSelected: (d: string) => void;
 }
 const Skill = ({ selected, setSelected }: prop) => {
-  const MainBox = styled(Box)(({ theme }) => ({
-    maxWidth: "1200px",
-    [theme.breakpoints.down("md")]: {
-      marginLeft: "0",
-      marginTop: "3rem",
-    },
-  }));
   return (
     <Box
       sx={{
         maxWidth: "1300px",
-        my: 8,
+        my: 3,
         mx: "auto",
-
         minHeight: "fit-content",
       }}
       onMouseOver={() => setSelected("About")}
     >
       <Box>
-        <Typography variant="h5" sx={{ textAlign: "center", color: "white" }}>
+        {/* <Typography
+          sx={{
+            textAlign: "center",
+            color: "white",
+            fontSize: { xs: "1.1rem", sm: "1.5rem" },
+          }}
+        >
           Here are the
           <span style={{ color: "rgba(0,199,255,255)" }}> Tech Stack</span> I've
           learned
-        </Typography>
+        </Typography> */}
         <Box sx={{ justifyContent: "center", my: 2 }}>
-          <MainBox>
+          <Box sx={{ maxWidth: "1200px" }}>
             <Stack
               direction="row"
               sx={{
@@ -42,6 +40,7 @@ const Skill = ({ selected, setSelected }: prop) => {
                 flexWrap: { md: "wrap" },
                 justifyContent: { md: "center" },
                 gap: 2,
+                mx: 1,
               }}
             >
               {icons.map((i) => {
@@ -56,7 +55,7 @@ const Skill = ({ selected, setSelected }: prop) => {
                 );
               })}
             </Stack>
-          </MainBox>
+          </Box>
         </Box>
       </Box>
     </Box>
