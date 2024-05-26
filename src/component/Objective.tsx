@@ -1,37 +1,20 @@
 import { Box, Stack } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { obj } from "../file/object";
-interface prop {
-  selected?: string;
-  setSelected: (d: string) => void;
-}
-const Objective = ({ selected, setSelected }: prop) => {
+
+const Objective = () => {
   return (
     <Box
       sx={{
         borderTop: "1px solid #7B89A8",
         maxWidth: "1100px",
-
         mx: "auto",
         minHeight: "fit-content",
+        my: 2,
       }}
       id="about"
-      onMouseOver={() => setSelected("Objective")}
     >
-      <Typography
-        variant="h5"
-        color="white"
-        sx={{
-          width: "100%",
-          textAlign: "center",
-          mt: 2,
-
-          fontSize: { md: "2rem" },
-        }}
-      >
-        About
-      </Typography>
-      <Stack
+      {/* <Stack
         direction="row"
         sx={{
           overflow: "auto",
@@ -73,7 +56,21 @@ const Objective = ({ selected, setSelected }: prop) => {
             </Box>
           );
         })}
-      </Stack>
+      </Stack> */}
+      <Box sx={{ display: "flex", flexDirection: "column", gap: 2, mt: 2 }}>
+        {obj.map((d) => (
+          <Box key={d} sx={{ display: "flex", gap: 2, mx: 1 }}>
+            <Typography sx={{ color: "white", fontSize: "1.2rem" }}>
+              -
+            </Typography>
+            <Typography
+              sx={{ color: "white", fontSize: { xs: "0.9rem", sm: "1rem" } }}
+            >
+              {d}
+            </Typography>
+          </Box>
+        ))}
+      </Box>
     </Box>
   );
 };

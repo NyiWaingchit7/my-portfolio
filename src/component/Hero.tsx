@@ -1,11 +1,8 @@
 import { Box, Slide, Typography, Zoom, styled } from "@mui/material";
 import img from "../pic/383784630_1052459922592359_848932231236809971_n.jpg";
 import { useEffect, useRef, useState } from "react";
-interface prop {
-  selected?: string;
-  setSelected: (d: string) => void;
-}
-const Hero = ({ selected, setSelected }: prop) => {
+
+const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const elementRef = useRef(null);
@@ -36,7 +33,6 @@ const Hero = ({ selected, setSelected }: prop) => {
         mt: 2,
       }}
       ref={elementRef}
-      onMouseEnter={() => setSelected("Home")}
       className={`hidden-content ${isVisible ? "visible" : ""}`}
     >
       <Box>

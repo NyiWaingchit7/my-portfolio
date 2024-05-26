@@ -6,9 +6,9 @@ import Objective from "./Objective";
 const Home = () => {
   return (
     <>
-      <Hero setSelected={() => {}} />
-      <Skill setSelected={() => {}} />
-      <Objective setSelected={() => {}} />
+      <Hero />
+      <Skill />
+      <Objective />
     </>
   );
 };

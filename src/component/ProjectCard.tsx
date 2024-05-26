@@ -35,6 +35,7 @@ const ProjectCard = ({
           margin: "1rem",
           cursor: "pointer",
           position: "relative",
+          scrollSnapAlign: "center",
         }}
         onMouseOver={() => setShow(true)}
         onMouseOut={() => setShow(false)}

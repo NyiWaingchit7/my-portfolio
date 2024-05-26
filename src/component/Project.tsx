@@ -32,7 +32,6 @@ const Project = ({ selected, setSelected }: prop) => {
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
-          mt: 2,
         }}
       >
         {projects.map((p) => {

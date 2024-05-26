@@ -7,7 +7,7 @@ interface Prop {
 const Layout = ({ children }: Prop) => {
   return (
     <div>
-      <Navbar setSelected={() => {}} />
+      <Navbar />
       {children}
       <Footer />
     </div>

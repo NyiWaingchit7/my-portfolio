@@ -1,21 +1,17 @@
 import { AppBar, Box, Typography, styled } from "@mui/material";
 import CodeIcon from "@mui/icons-material/Code";
 import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 
-interface prop {
-  selected?: string;
-  setSelected: (d: string) => void;
-}
-const Navbar = ({ selected, setSelected }: prop) => {
+const Navbar = () => {
+  const [selected, setSelected] = useState("Home");
   return (
     <Box
       sx={{
-        flexGrow: 1,
         p: 3,
         maxWidth: "1200px",
-        mx: "auto",
+        mx: { xs: 1, sm: "auto" },
       }}
-      id="home"
     >
       <AppBar
         style={{
