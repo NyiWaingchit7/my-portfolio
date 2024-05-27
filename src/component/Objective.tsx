@@ -12,7 +12,6 @@ const Objective = () => {
         minHeight: "fit-content",
         my: 2,
       }}
-      id="about"
     >
       {/* <Stack
         direction="row"
@@ -57,6 +56,7 @@ const Objective = () => {
           );
         })}
       </Stack> */}
+
       <Box sx={{ display: "flex", flexDirection: "column", gap: 2, mt: 2 }}>
         {obj.map((d) => (
           <Box key={d} sx={{ display: "flex", gap: 2, mx: 1 }}>
