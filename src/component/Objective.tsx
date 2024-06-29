@@ -13,7 +13,7 @@ const Objective = () => {
         my: 2,
       }}
     >
-      {/* <Stack
+      <Stack
         direction="row"
         sx={{
           overflow: "auto",
@@ -55,9 +55,9 @@ const Objective = () => {
             </Box>
           );
         })}
-      </Stack> */}
+      </Stack>
 
-      <Box sx={{ display: "flex", flexDirection: "column", gap: 2, mt: 2 }}>
+      {/* <Box sx={{ display: "flex", flexDirection: "column", gap: 2, mt: 2 }}>
         {obj.map((d) => (
           <Box key={d} sx={{ display: "flex", gap: 2, mx: 1 }}>
             <Typography sx={{ color: "white", fontSize: "1.2rem" }}>
@@ -70,7 +70,7 @@ const Objective = () => {
             </Typography>
           </Box>
         ))}
-      </Box>
+      </Box> */}
     </Box>
   );
 };
