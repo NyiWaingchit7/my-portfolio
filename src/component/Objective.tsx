@@ -56,21 +56,6 @@ const Objective = () => {
           );
         })}
       </Stack>
-
-      {/* <Box sx={{ display: "flex", flexDirection: "column", gap: 2, mt: 2 }}>
-        {obj.map((d) => (
-          <Box key={d} sx={{ display: "flex", gap: 2, mx: 1 }}>
-            <Typography sx={{ color: "white", fontSize: "1.2rem" }}>
-              -
-            </Typography>
-            <Typography
-              sx={{ color: "white", fontSize: { xs: "0.9rem", sm: "1rem" } }}
-            >
-              {d}
-            </Typography>
-          </Box>
-        ))}
-      </Box> */}
     </Box>
   );
 };

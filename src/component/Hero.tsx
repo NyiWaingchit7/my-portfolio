@@ -1,24 +1,14 @@
-import { Box, Slide, Typography, Zoom, styled } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import img from "../pic/383784630_1052459922592359_848932231236809971_n.jpg";
-import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const elementRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.8 }
-    );
-
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
-    }
-  }, []);
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  console.log(inView);
 
   return (
     <Box
@@ -32,8 +22,6 @@ const Hero = () => {
         mb: 2,
         mt: 2,
       }}
-      ref={elementRef}
-      className={`hidden-content ${isVisible ? "visible" : ""}`}
     >
       <Box>
         <Box
@@ -46,42 +34,48 @@ const Hero = () => {
             flexDirection: { xs: "column-reverse", md: "row" },
           }}
         >
-          <Box sx={{ maxWidth: "500px" }}>
-            <Typography
-              sx={{
-                textAlign: "center",
-                color: "white",
-                fontSize: { xs: "1rem", sm: "1.5rem" },
-                lineHeight: { xs: 1.5, md: 1.7 },
-              }}
-            >
-              Hello there! I'm{" "}
+          <motion.div
+            ref={ref}
+            initial={{ opacity: 0, x: -250 }}
+            animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 250 }}
+            transition={{ opacity: { duration: 0.5 }, x: { duration: 0.5 } }}
+          >
+            <Box sx={{ maxWidth: "500px" }}>
               <Typography
-                variantMapping={{ body1: "span" }}
                 sx={{
-                  fontSize: { xs: "1.2rem", sm: "1.5rem" },
-                  fontWeight: "bold",
-                  color: "#00C7FF",
+                  textAlign: "center",
+                  color: "white",
+                  fontSize: { xs: "1rem", sm: "1.5rem" },
+                  lineHeight: { xs: 1.5, md: 1.7 },
                 }}
               >
-                Nyi Waing Chit
-              </Typography>{" "}
-              , a passionate{" "}
-              <Typography
-                variantMapping={{ body1: "span" }}
-                sx={{
-                  fontSize: { xs: "1.2rem", sm: "1.5rem" },
-                  fontWeight: "bold",
-                  color: "#00C7FF",
-                }}
-              >
-                Web Developer
-              </Typography>{" "}
-              . As you navigate through my portfolio, you'll discover the
-              perfect blend of creativity, innovation, and technical prowess.
-            </Typography>
-          </Box>
-
+                Hello there! I'm{" "}
+                <Typography
+                  variantMapping={{ body1: "span" }}
+                  sx={{
+                    fontSize: { xs: "1.2rem", sm: "1.5rem" },
+                    fontWeight: "bold",
+                    color: "#00C7FF",
+                  }}
+                >
+                  Nyi Waing Chit
+                </Typography>{" "}
+                , a passionate{" "}
+                <Typography
+                  variantMapping={{ body1: "span" }}
+                  sx={{
+                    fontSize: { xs: "1.2rem", sm: "1.5rem" },
+                    fontWeight: "bold",
+                    color: "#00C7FF",
+                  }}
+                >
+                  Web Developer
+                </Typography>{" "}
+                . As you navigate through my portfolio, you'll discover the
+                perfect blend of creativity, innovation, and technical prowess.
+              </Typography>
+            </Box>
+          </motion.div>
           <Box
             component="img"
             src={img}

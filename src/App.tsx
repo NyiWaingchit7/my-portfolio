@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Project from "./component/Project";
 import Layout from "./component/Layout";
 import ScrollTop from "./component/ScrollTop";
+import motion from "framer-motion";
 
 function App() {
   return (

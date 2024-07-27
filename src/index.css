@@ -10,13 +10,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #0c0c1d;
 }
-.hidden-content {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-.hidden-content.visible {
-  opacity: 1;
-}
 
 ::-webkit-scrollbar {
   width: 0px;
