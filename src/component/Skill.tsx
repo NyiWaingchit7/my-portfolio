@@ -46,7 +46,7 @@ const Skill = () => {
                     id={i.id}
                     bg={i.bg}
                     name={i.name}
-                    src={i.src}
+                    icon={i.icon}
                   />
                 );
               })}

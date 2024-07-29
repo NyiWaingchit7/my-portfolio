@@ -8,7 +8,6 @@ const Hero = () => {
     triggerOnce: true,
     threshold: 0.5,
   });
-  console.log(inView);
 
   return (
     <Box

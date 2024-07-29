@@ -1,8 +1,9 @@
 import React from "react";
 import { IconType } from "../file/icon";
 import { Box, Typography } from "@mui/material";
+import StackIcon from "tech-stack-icons";
 
-const Icon = ({ name, src, bg }: IconType) => {
+const Icon = ({ name, icon, bg }: IconType) => {
   return (
     <Box
       sx={{
@@ -12,22 +13,7 @@ const Icon = ({ name, src, bg }: IconType) => {
         alignItems: "center",
       }}
     >
-      <Box
-        component="img"
-        src={src}
-        sx={{
-          width: { xs: "60px", md: "80px" },
-          borderRadius: "20px",
-          height: 50,
-          objectFit: "contain",
-          bgcolor: bg && bg,
-          ":hover": {
-            transform: "scale(1.2)",
-          },
-          transition: "all ease-in 0.5s",
-        }}
-      />
-
+      <StackIcon style={{ width: "60px" }} name={icon} />,
       <Typography
         variant="body1"
         sx={{

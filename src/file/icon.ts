@@ -1,50 +1,51 @@
 export interface IconType {
   id: number;
   name: string;
-  src: string;
+  icon: string;
   bg?: string;
 }
 export const icons: IconType[] = [
   {
     id: 2,
     name: "JavaScript",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    icon: "js",
   },
   {
     id: 5,
     name: "TypeScript",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    icon: "typescript",
   },
   {
     id: 4,
     name: "NodeJS",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    icon: "nodejs",
+  },
+  {
+    id: 7,
+    name: "PHP",
+    icon: "php",
   },
   {
     id: 1,
     name: "NextJs",
-    src: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
+    icon: "nextjs2",
     bg: "white",
   },
 
   {
     id: 6,
     name: "ReactJs",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    icon: "reactjs",
   },
-  {
-    id: 7,
-    name: "ExpressJs",
-    src: "https://miro.medium.com/v2/resize:fit:679/0*vq-JSMynSHUPXx70",
-  },
+  { id: 10, name: "Laravel", icon: "laravel" },
   {
     id: 8,
     name: "Tailwind",
-    src: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+    icon: "tailwindcss",
   },
   {
     id: 9,
     name: "Material UI",
-    src: "https://cdn.worldvectorlogo.com/logos/material-ui-1.svg",
+    icon: "materialui",
   },
 ];
